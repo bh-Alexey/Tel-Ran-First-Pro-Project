@@ -1,0 +1,100 @@
+Federal Retirement Thrift, true
+California Public Employees, false
+California State Teachers, true
+New York State Common, true
+New York City Retirement, true
+Florida State Board, false
+Texas Teachers, true
+Washington State Board, false
+Wisconsin Investment Board, false
+Boeing, false
+New York State Teachers, true
+North Carolina, true
+California University, false
+Ohio Public Employees, false
+AT&T, false
+IBM, true
+Virginia Retirement, true
+Raytheon Technologies, false
+Michigan Retirement, true
+New Jersey, false
+Minnesota State Board, true
+Kaiser, false
+Georgia Teachers, true
+Oregon Public Employees, true
+Massachusetts PRIM, false
+General Motors, true
+Ohio State Teachers, true
+General Electric, true
+United Parcel Service, true
+United Nations Joint Staff, false
+Lockheed Martin, false
+Tennessee Consolidated, true
+Bank of America, true
+Ford Motor, false
+Los Angeles County Empl., false
+Northrop Grumman, true
+Pennsylvania School Empl., true
+Colorado Employees, true
+Maryland State Retirement, true
+Wells Fargo, false
+Verizon, true
+Illinois Teachers, false
+J.P. Morgan Chase, true
+FedEx, false
+Nevada Public Employees, true
+Missouri Schools & Educ., false
+Illinois Municipal, false
+Teamsters, Western Conf., false
+Utah State Retirement, false
+Johnson & Johnson, false
+State Farm, true
+Arizona State Retirement, false
+South Carolina Public Empl., true
+Alabama Retirement, false
+Delta Air Lines, false
+Indiana Public Retirement, true
+Nokia USA, true
+Iowa Public Employees, false
+Pennsylvania Employees, true
+Alaska Retirement, true
+Connecticut Retirement, true
+Texas County & District, true
+Microsoft, true
+San Francisco City & County, true
+Texas Employees, false
+American Airlines, false
+Federal Reserve Employees, false
+Pfizer, true
+Honeywell, false
+Mississippi Employees, false
+Walmart, true
+Exxon Mobil, false
+Texas Municipal Retirement, true
+3M, false
+General Dynamics, true
+New York State Def. Comp., false
+CVS Health, true
+Walt Disney, false
+Caterpillar, true
+Citigroup, false
+Exelon, false
+United Airlines Holdings, true
+Shell Oil, true
+Los Angeles Fire & Police, true
+PepsiCo, false
+Chevron, false
+National Electric, true
+World Bank, true
+Illinois State Board, false
+PG&E, true
+FCA US, true
+Louisiana Teachers, false
+Intel, false
+Costco Wholesale, false
+Dow, false
+New York City Def. Comp., false
+National Railroad, true
+Deloitte, true
+Illinois State Universities, true
+Ascension, false
