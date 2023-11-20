@@ -71,7 +71,7 @@ public class PensionFund {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PensionFund that = (PensionFund) o;
-        return isState == that.isState && Objects.equals(name, that.name) && Objects.equals(dateOfCreation, that.dateOfCreation) && Objects.equals(persons, that.persons);
+        return isState == that.isState && Objects.equals(name, that.name) && Objects.equals(dateOfCreation, that.dateOfCreation) && Objects.equals(depositors, that.depositors);
     }
 
     @Override
