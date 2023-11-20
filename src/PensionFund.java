@@ -1,12 +1,8 @@
+import java.io.FileNotFoundException;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
-//Protected
-//Классы упаковщики
 
 public class PensionFund {
     private String name;
@@ -17,21 +13,21 @@ public class PensionFund {
 
     private List<Worker> persons;
 
-    private Map<DayOfWeek, Boolean> workDays;
+    private static Map<DayOfWeek, Boolean> workDays = fillWorkDays();
 
     public PensionFund(String name, boolean isState, String dateOfCreation, List<Worker> persons) {
         this.name = name;
         this.isState = isState;
         this.dateOfCreation = dateOfCreation;
         this.persons = persons;
-        this.workDays = new HashMap<>();
+        workDays = new HashMap<>();
     }
-    public PensionFund(String string, String dateOfCreation, List<Worker> persons) {
-        String[] array = string.split(", ");
+    public PensionFund(String string) throws FileNotFoundException {
+        String[] array = string.split(" - ");
         this.name = array[0];
         this.isState = Boolean.parseBoolean(array[1]);
-        this.persons = getPersons();
-        this.dateOfCreation = dateOfCreation;
+        this.dateOfCreation = array[2];
+        this.persons = depositorsAdd();
     }
 
     public Map<DayOfWeek, Boolean> getWorkDays() {
@@ -39,7 +35,7 @@ public class PensionFund {
     }
 
     public void setWorkDays(Map<DayOfWeek, Boolean> workDays) {
-        this.workDays = workDays;
+        PensionFund.workDays = workDays;
     }
 
     public List<Worker> getPersons() {
@@ -70,7 +66,6 @@ public class PensionFund {
         return dateOfCreation;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -92,6 +87,27 @@ public class PensionFund {
                 ", dateOfCreation='" + dateOfCreation + '\'' +
                 ", persons=" + persons +
                 '}';
+    }
+
+    public List<Worker> depositorsAdd() throws FileNotFoundException {
+        Random random = new Random();
+        List<Worker> workers = WorkerInit.createWorker();
+        List<Worker> members = new ArrayList<>();
+        for (int i = 0; i < random.nextInt(100); i++) {
+            members.add(workers.get(random.nextInt(workers.size())));
+        }
+        return members;
+    }
+
+    public static HashMap<DayOfWeek, Boolean> fillWorkDays() {
+        HashMap<DayOfWeek, Boolean> workingDays = new HashMap<>();
+        Random random = new Random();
+
+        DayOfWeek[] days = DayOfWeek.values();
+        for (DayOfWeek day: days) {
+            workingDays.put(day, random.nextInt() > 0.1);
+        }
+        return workingDays;
     }
 
     public void info() {
@@ -133,13 +149,12 @@ public class PensionFund {
             return 0.0;
         }
 
-        double sum = 0.0;
+        double pensionPaid = 0.0;
 
         for (Worker worker : persons) {
-            sum += calculatePensionFor(worker);
+            pensionPaid += calculatePensionFor(worker);
         }
 
-        return sum / persons.size();
+        return pensionPaid / persons.size();
     }
-
 }

@@ -22,23 +22,23 @@ public class WorkerGenerator {
                 .toList();
         List<String> surnames = bufferedReaderForLastNames.lines()
                 .toList();
-            Gender sex;
+            Gender gender;
 
         for (int i = 0; i < 1000; i++) {
             int minSalary = random.nextInt(550, 1000);
             int maxSalary = random.nextInt(1100, 6000);
             int nameRandomNumber = random.nextInt(0, 2000);
             if (nameRandomNumber > 1000) {
-                sex = Gender.FEMALE;
+                gender = Gender.FEMALE;
             }
             else {
-                sex = Gender.MALE;
+                gender = Gender.MALE;
             }
             String name = names.get(nameRandomNumber);
             int lastNameRandomNumber = random.nextInt(0, 1000);
             String lastName = surnames.get(lastNameRandomNumber);
 
-            String generatedString = name + " " + lastName + " " + minSalary + " " + maxSalary + " " + sex;
+            String generatedString = name + " " + lastName + " " + minSalary + " " + maxSalary + " " + gender;
             bufferedWriter.append(generatedString);
             bufferedWriter.newLine();
             bufferedWriter.flush();

@@ -1,100 +1,100 @@
-Federal Retirement Thrift, true
-California Public Employees, false
-California State Teachers, true
-New York State Common, true
-New York City Retirement, true
-Florida State Board, false
-Texas Teachers, true
-Washington State Board, false
-Wisconsin Investment Board, false
-Boeing, false
-New York State Teachers, true
-North Carolina, true
-California University, false
-Ohio Public Employees, false
-AT&T, false
-IBM, true
-Virginia Retirement, true
-Raytheon Technologies, false
-Michigan Retirement, true
-New Jersey, false
-Minnesota State Board, true
-Kaiser, false
-Georgia Teachers, true
-Oregon Public Employees, true
-Massachusetts PRIM, false
-General Motors, true
-Ohio State Teachers, true
-General Electric, true
-United Parcel Service, true
-United Nations Joint Staff, false
-Lockheed Martin, false
-Tennessee Consolidated, true
-Bank of America, true
-Ford Motor, false
-Los Angeles County Empl., false
-Northrop Grumman, true
-Pennsylvania School Empl., true
-Colorado Employees, true
-Maryland State Retirement, true
-Wells Fargo, false
-Verizon, true
-Illinois Teachers, false
-J.P. Morgan Chase, true
-FedEx, false
-Nevada Public Employees, true
-Missouri Schools & Educ., false
-Illinois Municipal, false
-Teamsters, Western Conf., false
-Utah State Retirement, false
-Johnson & Johnson, false
-State Farm, true
-Arizona State Retirement, false
-South Carolina Public Empl., true
-Alabama Retirement, false
-Delta Air Lines, false
-Indiana Public Retirement, true
-Nokia USA, true
-Iowa Public Employees, false
-Pennsylvania Employees, true
-Alaska Retirement, true
-Connecticut Retirement, true
-Texas County & District, true
-Microsoft, true
-San Francisco City & County, true
-Texas Employees, false
-American Airlines, false
-Federal Reserve Employees, false
-Pfizer, true
-Honeywell, false
-Mississippi Employees, false
-Walmart, true
-Exxon Mobil, false
-Texas Municipal Retirement, true
-3M, false
-General Dynamics, true
-New York State Def. Comp., false
-CVS Health, true
-Walt Disney, false
-Caterpillar, true
-Citigroup, false
-Exelon, false
-United Airlines Holdings, true
-Shell Oil, true
-Los Angeles Fire & Police, true
-PepsiCo, false
-Chevron, false
-National Electric, true
-World Bank, true
-Illinois State Board, false
-PG&E, true
-FCA US, true
-Louisiana Teachers, false
-Intel, false
-Costco Wholesale, false
-Dow, false
-New York City Def. Comp., false
-National Railroad, true
-Deloitte, true
-Illinois State Universities, true
-Ascension, false
+Operating Eng. Local 12 - true - 7/18/1986
+Carpenters, New Jersey - false - 3/20/2008
+San Mateo County - false - 6/20/2001
+Fiserv - false - 4/8/1993
+Anne Arundel County - false - 8/27/1984
+Republic Services - false - 1/2/1988
+Charter Communications - false - 9/15/2003
+USAA - false - 4/19/2004
+Milwaukee County - true - 2/23/1983
+Allstate - true - 8/3/2019
+Keurig Dr Pepper - false - 8/14/1988
+CSX - false - 7/11/1993
+Charles Schwab - true - 4/13/1999
+Fujitsu America - false - 11/14/1992
+Howard Hughes Medical - true - 5/14/2010
+Johnson & Johnson - false - 9/12/1990
+Blue Cross/Shield of Mass. - false - 10/10/1993
+Electrolux - false - 7/13/2013
+Oncor Electric Delivery - false - 11/17/1996
+Comerica - true - 2/2/1986
+San Bernardino County - false - 8/25/1995
+Wellington Mgmt. - false - 5/26/1987
+Allegheny Technologies - true - 2/2/2012
+Rhode Island Employees - false - 11/13/2012
+Montana Board of Invest. - false - 9/12/2005
+Hanover Insurance - true - 6/6/1980
+Operating Eng. Midwest - false - 3/26/2001
+Kentucky Public Pensions - true - 10/13/2012
+Tyson Foods - false - 7/19/1988
+Sony America - false - 4/1/1995
+Auto Club of S. Calif. - false - 11/5/1984
+ABB - true - 5/17/1992
+Freeport-McMoRan - true - 6/20/1992
+Cornell University - false - 11/5/1995
+Detroit Police & Fire - true - 4/17/2009
+Cleveland Clinic - false - 5/14/2001
+Nike - true - 10/15/1998
+New York State Common - false - 4/12/2010
+Tenet Healthcare - true - 5/6/1997
+Boehringer Ingelheim - true - 9/20/1984
+Consolidated Edison - false - 1/21/1993
+Olin - false - 7/15/1980
+Cook County Def. Comp. - false - 4/1/2017
+W.R. Grace - false - 4/7/1990
+Laborers International - false - 6/10/1994
+Reynolds American - true - 7/23/1995
+MITRE - false - 8/20/2004
+PPL - false - 6/17/1990
+Old Republican Int'l - true - 4/20/1988
+Operating Eng. Local 15 - false - 10/3/2004
+Schneider Electric USA - true - 7/11/2001
+Old Republican Int'l - false - 2/13/1993
+Best Buy - true - 8/12/1996
+Salt River Valley - true - 2/10/1997
+Equifax - false - 4/19/2020
+Barclays Bank - false - 6/7/2013
+Amgen - false - 11/22/2021
+McDermott - false - 7/12/1981
+Cisco Systems - false - 2/12/2008
+Allegheny Technologies - false - 10/23/1982
+AAA N. Calif., Nev. & Utah - false - 1/19/2004
+Nashville & Davidson County - true - 5/2/1997
+SRI International - true - 9/5/2020
+Trinity Health - false - 7/1/2008
+Wellington Mgmt. - false - 10/15/2016
+Cornell University - true - 4/4/2020
+Texas Employees - false - 6/16/1986
+Aerojet Rocketdyne - false - 5/14/1982
+Dow - true - 10/22/2006
+Boston Retirement - false - 9/4/1995
+Smithfield Foods - false - 1/5/1985
+Pennsylvania School Empl. - true - 1/26/1991
+CFI - false - 11/12/2008
+Ameriprise Financial - true - 8/24/2011
+General Electric - true - 3/7/2007
+JetBlue Airways - false - 3/24/2019
+Delta Air Lines - false - 5/17/2014
+Dun & Bradstreet - false - 5/15/2011
+Mayo Clinic - true - 11/1/2006
+Phoenix City Employees - true - 6/1/2003
+Battelle - false - 11/20/1985
+New York Times - true - 5/16/2011
+Mount Sinai - true - 9/21/2013
+Danaher - true - 4/24/1995
+Illinois State Board - true - 5/11/1999
+Hewlett Packard Enterprise - false - 11/9/1982
+General Dynamics - false - 2/19/1990
+Alaska Retirement - true - 2/25/2021
+Middlesex County - false - 6/6/2012
+Montgomery Public Schools - true - 1/11/1994
+Yale University - false - 9/3/2004
+Western Digital - false - 7/10/1995
+Equity League - false - 10/16/2002
+Enterprise Rent-A-Car - false - 9/14/2020
+BP America - false - 8/8/1995
+Jones Day - true - 10/12/2000
+Talen Energy - true - 8/19/1997
+Walgreens Boots Alliance - true - 10/6/1980
+Dallas City Employees - true - 7/22/2005
+Bakery & Confectionery - true - 2/4/2015

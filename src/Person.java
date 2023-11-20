@@ -15,8 +15,6 @@ public abstract class Person {
 
     private Gender gender;
 
-    private Person dad;
-
     public Person(String name, String surname, int age, double weight, int height) {
         this.name = name;
         this.surname = surname;
@@ -111,13 +109,6 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public Person getDad() {
-        return dad;
-    }
-
-    public void setDad(Person dad) {
-        this.dad = dad;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -143,6 +134,4 @@ public abstract class Person {
                 ", gender=" + gender +
                 '}';
     }
-
-
 }

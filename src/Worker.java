@@ -6,13 +6,13 @@ public class Worker extends Person implements AbleToCalculatePension {
     private final static double PENSION_COEFFICIENT = 0.25;
     private final static double ADDITIONAL_COEFFICIENT = 0.05;
 
-    private final static int COUNT_OF_PROFS = 3;
+    private final static int PROFESSIONS_COEFFICIENT = 3;
 
     private int minSalary;
 
     private int maxSalary;
 
-    private Set<Proffession> proffessions;
+    private Set<Profession> professions;
 
     public Worker(String name, String surname, int age, double weight, int height) {
         super(name, surname, age, weight, height);
@@ -34,6 +34,31 @@ public class Worker extends Person implements AbleToCalculatePension {
         this.maxSalary = Integer.parseInt(array[3]);
         super.setGender(Gender.valueOf(array[4]));
     }
+
+    public int getMinSalary() {
+        return minSalary;
+    }
+
+    public void setMinSalary(int minSalary) {
+        this.minSalary = minSalary;
+    }
+
+    public int getMaxSalary() {
+        return maxSalary;
+    }
+
+    public void setMaxSalary(int maxSalary) {
+        this.maxSalary = maxSalary;
+    }
+
+    public Set<Profession> getProfessions() {
+        return professions;
+    }
+
+    public void setProfessions(Set<Profession> professions) {
+        this.professions = professions;
+    }
+
 
 
     @Override
@@ -69,30 +94,6 @@ public class Worker extends Person implements AbleToCalculatePension {
                 '}';
     }
 
-    public int getMinSalary() {
-        return minSalary;
-    }
-
-    public void setMinSalary(int minSalary) {
-        this.minSalary = minSalary;
-    }
-
-    public int getMaxSalary() {
-        return maxSalary;
-    }
-
-    public void setMaxSalary(int maxSalary) {
-        this.maxSalary = maxSalary;
-    }
-
-    public Set<Proffession> getProffessions() {
-        return proffessions;
-    }
-
-    public void setProffessions(Set<Proffession> proffessions) {
-        this.proffessions = proffessions;
-    }
-
     @Override
     public double calculatePension() {
         Gender gender = getGender();
@@ -110,17 +111,13 @@ public class Worker extends Person implements AbleToCalculatePension {
             averageSalary = CalculatorUtils.calculateAverage(minSalary / 2, maxSalary * 2);
         }
 
-        double additionalMoney = 0.0;
+        double professionsReward = 0.0;
 
-        if (proffessions != null) {
-            int countProffessions = proffessions.size();
-            additionalMoney = countProffessions / COUNT_OF_PROFS * ADDITIONAL_COEFFICIENT;
+        if (professions != null) {
+            int countProfessions = professions.size();
+            professionsReward = (double) countProfessions / PROFESSIONS_COEFFICIENT * ADDITIONAL_COEFFICIENT;
         }
 
-        //0.05
-
-
-        //return averageSalary * PENSION_COEFFICIENT + (averageSalary * PENSION_COEFFICIENT * additionalMoney);
-        return averageSalary * PENSION_COEFFICIENT * (1 + additionalMoney);
+        return averageSalary * PENSION_COEFFICIENT * (1 + professionsReward);
     }
 }

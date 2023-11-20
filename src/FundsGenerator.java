@@ -20,9 +20,15 @@ public class FundsGenerator {
 
         for (int i = 0; i < 100; i++) {
             boolean isState = random.nextBoolean();
-            String fundName = pensionFunds.get(i);
+            int nameRandomNumber = random.nextInt(0, 1000);
+            String fundName = pensionFunds.get(nameRandomNumber);
+            int yearRandomNumber = random.nextInt(1980, 2022);
+            int monthRandomNumber = random.nextInt(1, 12);
+            int dayRandomNumber = random.nextInt(1, 28);
+            String creationDate = monthRandomNumber + "/" + dayRandomNumber + "/" + yearRandomNumber;
 
-            String generatedString = fundName + ", " + isState;
+
+            String generatedString = fundName + " - " + isState + " - " + creationDate;
             bufferedWriter.append(generatedString);
             bufferedWriter.newLine();
             bufferedWriter.flush();

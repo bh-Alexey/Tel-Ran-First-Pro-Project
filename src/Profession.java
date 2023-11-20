@@ -1,8 +1,5 @@
-public enum Proffession {
-
+public enum Profession {
     BUILDER,
     TEACHER,
     DOCTOR
-
-
 }
