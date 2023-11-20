@@ -11,15 +11,15 @@ public class PensionFund {
 
     private final String dateOfCreation;
 
-    private List<Worker> persons;
+    private List<Worker> depositors;
 
     private static Map<DayOfWeek, Boolean> workDays = fillWorkDays();
 
-    public PensionFund(String name, boolean isState, String dateOfCreation, List<Worker> persons) {
+    public PensionFund(String name, boolean isState, String dateOfCreation, List<Worker> depositors) {
         this.name = name;
         this.isState = isState;
         this.dateOfCreation = dateOfCreation;
-        this.persons = persons;
+        this.depositors = depositors;
         workDays = new HashMap<>();
     }
     public PensionFund(String string) throws FileNotFoundException {
@@ -27,7 +27,7 @@ public class PensionFund {
         this.name = array[0];
         this.isState = Boolean.parseBoolean(array[1]);
         this.dateOfCreation = array[2];
-        this.persons = depositorsAdd();
+        this.depositors = depositorsAdd();
     }
 
     public Map<DayOfWeek, Boolean> getWorkDays() {
@@ -38,12 +38,12 @@ public class PensionFund {
         PensionFund.workDays = workDays;
     }
 
-    public List<Worker> getPersons() {
-        return persons;
+    public List<Worker> getDepositors() {
+        return depositors;
     }
 
-    public void setPersons(List<Worker> persons) {
-        this.persons = persons;
+    public void setDepositors(List<Worker> depositors) {
+        this.depositors = depositors;
     }
 
     public String getName() {
@@ -76,7 +76,7 @@ public class PensionFund {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, isState, dateOfCreation, persons);
+        return Objects.hash(name, isState, dateOfCreation, depositors);
     }
 
     @Override
@@ -85,7 +85,7 @@ public class PensionFund {
                 "name='" + name + '\'' +
                 ", isState=" + isState +
                 ", dateOfCreation='" + dateOfCreation + '\'' +
-                ", persons=" + persons +
+                ", persons=" + depositors +
                 '}';
     }
 
@@ -113,7 +113,7 @@ public class PensionFund {
     public void info() {
         System.out.println("Fund's name " + name);
 
-        int count = (persons != null) ? persons.size() : 0;
+        int count = (depositors != null) ? depositors.size() : 0;
 
         if (isState) {
             System.out.println("People invested in the fund: " + count / 1000 + " thousand");
@@ -145,16 +145,16 @@ public class PensionFund {
     }
 
     public double calculateMedianPension() {
-        if (persons == null || persons.size() == 0) {
+        if (depositors == null || depositors.size() == 0) {
             return 0.0;
         }
 
         double pensionPaid = 0.0;
 
-        for (Worker worker : persons) {
+        for (Worker worker : depositors) {
             pensionPaid += calculatePensionFor(worker);
         }
 
-        return pensionPaid / persons.size();
+        return pensionPaid / depositors.size();
     }
 }
