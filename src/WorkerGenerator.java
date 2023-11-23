@@ -25,6 +25,7 @@ public class WorkerGenerator {
             Gender gender;
 
         for (int i = 0; i < 1000; i++) {
+            int age = random.nextInt(16,65);
             int minSalary = random.nextInt(550, 1000);
             int maxSalary = random.nextInt(1100, 6000);
             int nameRandomNumber = random.nextInt(0, 2000);
@@ -38,7 +39,7 @@ public class WorkerGenerator {
             int lastNameRandomNumber = random.nextInt(0, 1000);
             String lastName = surnames.get(lastNameRandomNumber);
 
-            String generatedString = name + " " + lastName + " " + minSalary + " " + maxSalary + " " + gender;
+            String generatedString = name + " " + lastName + " " + minSalary + " " + maxSalary + " " + gender + " " + age;
             bufferedWriter.append(generatedString);
             bufferedWriter.newLine();
             bufferedWriter.flush();

@@ -1,7 +1,5 @@
 import java.io.FileNotFoundException;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class CalculatorUtils {
 
@@ -17,7 +15,7 @@ public class CalculatorUtils {
         List<PensionFund> pensionFunds = FundInit.createFund();
         return pensionFunds.stream()
                 .filter(Objects::nonNull)
-                .max(Comparator.comparingInt(fund -> fund.getPersons().size()))
+                .max(Comparator.comparingInt(fund -> fund.getDepositors().size()))
                 .orElse(null);
     }
 
@@ -29,5 +27,29 @@ public class CalculatorUtils {
                 .orElse(null);
         assert pensioner != null;
         return pensioner.getName() + " " + pensioner.getSurname();
+    }
+
+    public static double avgPensionFundsPaid() throws FileNotFoundException {
+        List<PensionFund> pensionFunds = FundInit.createFund();
+        return (double) pensionFunds.stream()
+                .filter(Objects::nonNull)
+                .map(PensionFund::calculateMedianPension)
+                .count();
+    }
+
+    public static List<Worker> getFraudVictims() throws FileNotFoundException {
+        List<PensionFund> pensionFunds = FundInit.createFund();
+        return pensionFunds.stream()
+                .filter(funds -> !funds.isState())
+                .map(PensionFund::getDepositors)
+                .flatMap(Collection::stream)
+                .toList();
+    }
+
+    public static double fundsAvgPension() throws FileNotFoundException {
+        List<PensionFund> pensionFunds = FundInit.createFund();
+        int size = pensionFunds.size();
+        Optional<Double> paid = pensionFunds.stream().map(PensionFund::calculateMedianPension).reduce(Double::sum);
+        return paid.map(aDouble -> aDouble / size).orElse(0.0);
     }
 }

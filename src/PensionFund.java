@@ -85,7 +85,7 @@ public class PensionFund {
                 "name='" + name + '\'' +
                 ", isState=" + isState +
                 ", dateOfCreation='" + dateOfCreation + '\'' +
-                ", persons=" + depositors +
+                ", members=" + depositors +
                 '}';
     }
 
@@ -140,12 +140,11 @@ public class PensionFund {
             return false;
         }
 
-        boolean isWorkDay = workDays.get(dayOfWeekNow);
-        return isWorkDay;
+        return workDays.get(dayOfWeekNow);
     }
 
     public double calculateMedianPension() {
-        if (depositors == null || depositors.size() == 0) {
+        if (depositors == null || depositors.isEmpty()) {
             return 0.0;
         }
 
