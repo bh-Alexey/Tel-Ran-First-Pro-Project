@@ -29,12 +29,15 @@ public class CalculatorUtils {
         return pensioner.getName() + " " + pensioner.getSurname();
     }
 
-    public static double avgPensionFundsPaid() throws FileNotFoundException {
-        List<PensionFund> pensionFunds = FundInit.createFund();
-        return (double) pensionFunds.stream()
+    public static double mostHigherPension(int age) throws FileNotFoundException {
+        List<Worker> pensioners = WorkerInit.createWorker();
+        Worker pensioner = pensioners.stream()
                 .filter(Objects::nonNull)
-                .map(PensionFund::calculateMedianPension)
-                .count();
+                .filter(worker -> worker.getAge() < age)
+                .max(Comparator.comparingDouble(Worker::calculatePension))
+                .orElse(null);
+        assert pensioner != null;
+        return pensioner.calculatePension();
     }
 
     public static List<Worker> getFraudVictims() throws FileNotFoundException {
@@ -46,10 +49,33 @@ public class CalculatorUtils {
                 .toList();
     }
 
-    public static double fundsAvgPension() throws FileNotFoundException {
+    public static double avgPensionFundsPaid() throws FileNotFoundException {
         List<PensionFund> pensionFunds = FundInit.createFund();
         int size = pensionFunds.size();
-        Optional<Double> paid = pensionFunds.stream().map(PensionFund::calculateMedianPension).reduce(Double::sum);
+        Optional<Double> paid = pensionFunds.stream()
+                .map(PensionFund::calculateMedianPension)
+                .reduce(Double::sum);
         return paid.map(aDouble -> aDouble / size).orElse(0.0);
+    }
+
+    public static double workersAvgPension() throws FileNotFoundException {
+        List<Worker> workers = WorkerInit.createWorker();
+        int size = workers.size();
+        Optional<Double> pension = workers.stream()
+                .map(Worker::calculatePension)
+                .reduce(Double::sum);
+        return pension.map(aDouble -> aDouble / size).orElse(0.0);
+    }
+
+    public static String mostYoungerDepositor() throws FileNotFoundException {
+        List<PensionFund> pensionFunds = FundInit.createFund();
+        Worker depositors = pensionFunds.stream()
+                .filter(Objects::nonNull)
+                .map(PensionFund::getDepositors)
+                .flatMap(Collection::stream)
+                .min(Comparator.comparingInt(Worker::getAge))
+                .orElse(null);
+        assert depositors != null;
+        return depositors.getName() + " " + depositors.getSurname();
     }
 }
