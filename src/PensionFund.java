@@ -5,6 +5,7 @@ import java.util.*;
 
 
 public class PensionFund {
+    private final static int MAX_OF_MEMBERS = 100;
     private String name;
 
     private boolean isState;
@@ -27,7 +28,7 @@ public class PensionFund {
         this.name = array[0];
         this.isState = Boolean.parseBoolean(array[1]);
         this.dateOfCreation = array[2];
-        this.depositors = depositorsAdd();
+        this.depositors = addMembers(getDepositors());
     }
 
     public Map<DayOfWeek, Boolean> getWorkDays() {
@@ -89,12 +90,11 @@ public class PensionFund {
                 '}';
     }
 
-    public List<Worker> depositorsAdd() throws FileNotFoundException {
+    public List<Worker> addMembers(List<Worker> depositors) throws FileNotFoundException {
         Random random = new Random();
-        List<Worker> workers = WorkerInit.createWorker();
         List<Worker> members = new ArrayList<>();
-        for (int i = 0; i < random.nextInt(100); i++) {
-            members.add(workers.get(random.nextInt(workers.size())));
+        for (int i = 0; i < random.nextInt(MAX_OF_MEMBERS); i++) {
+            members.add(depositors.get(random.nextInt(depositors.size())));
         }
         return members;
     }

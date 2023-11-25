@@ -7,14 +7,14 @@ import java.util.Objects;
 
 public class FundInit {
 
-    private static final File file = new File("db/pension-funds.txt");
+    private static final File FILE = new File("pension-funds.txt");
 
-    public static List<PensionFund> createFund() throws FileNotFoundException {
+    public List<PensionFund> createFund() throws FileNotFoundException {
 
-        FileReader fileReader = new FileReader(file);
+        FileReader fileReader = new FileReader(String.valueOf(FILE));
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-        List<PensionFund> pensionFunds = bufferedReader.lines()
+        return bufferedReader.lines()
                 .filter(Objects::nonNull)
                 .map(fund -> {
                     try {
@@ -24,6 +24,5 @@ public class FundInit {
                     }
                 })
                 .toList();
-        return pensionFunds;
     }
 }
