@@ -7,10 +7,10 @@ import java.util.Objects;
 
 public class WorkerInit {
 
-    private static final File FILE = new File("workers.txt");
-    public List<Worker> createWorker(String workersFile) throws FileNotFoundException {
+    private final static String WORKERS_FILE = "data/workers.txt";
+    public static List<Worker> createWorkers() throws FileNotFoundException {
 
-        File file = new File(String.valueOf(FILE));
+        File file = new File(WORKERS_FILE);
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 

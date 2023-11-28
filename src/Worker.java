@@ -87,12 +87,13 @@ public class Worker extends Person implements AbleToCalculatePension {
 
     @Override
     public String toString() {
-        return "Worker{" +
-                "Firstname:" + getName() +
-                ", Lastname:" + getSurname() +
-                ", minSalary=" + minSalary +
-                ", maxSalary=" + maxSalary +
-                '}';
+        return "Worker - " +
+                "Full Name: " + getName() +
+                " " + getSurname() +
+                ", Age: " + getAge() +
+                ", minSalary = " + minSalary +
+                ", maxSalary = " + maxSalary +
+                ';' + "\n" + "\t\t";
     }
 
     @Override

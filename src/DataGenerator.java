@@ -3,7 +3,6 @@ import java.util.List;
 import java.util.Random;
 
 public class DataGenerator {
-
     private final static int PEOPLE_LIST_COUNT = 1000;
     private final static int START_AGE = 16;
     private final static int END_AGE = 120;

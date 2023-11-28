@@ -1,0 +1,100 @@
+Ohio School Employees - true - 3/4/1983
+Albertsons - false - 1/17/1983
+Montgomery Public Schools - false - 4/9/2011
+First American - true - 8/23/2021
+Lowes - false - 6/27/2006
+Chicago Public Schools - true - 6/20/2015
+Trader Joe's - false - 10/26/1990
+SAG-Producers - false - 7/5/1989
+Cook County Employees - false - 8/27/1988
+Seagate Technology - false - 11/4/1994
+YRC Worldwide - true - 3/23/2008
+Goldman Sachs - false - 9/10/2000
+Roofers United - true - 11/25/2019
+California Public Employees - true - 1/3/1991
+Caterpillar - true - 7/2/1980
+UnitedHealth - true - 6/5/1986
+UFCW Industry, Ill. - false - 10/8/2009
+Johnson Controls - false - 8/23/2019
+Parsons - true - 3/14/1992
+Montgomery Public Schools - true - 6/17/2020
+Sidley Austin - false - 4/6/2006
+New Mexico Public Empl. - false - 7/24/2003
+ARAMARK - true - 10/11/1997
+Schneider Electric USA - true - 9/18/2017
+Talen Energy - false - 10/7/1985
+National Railroad - true - 3/3/1984
+Blue Cross/Shield of Mich. - false - 2/23/1989
+MITRE - false - 3/5/1986
+Citigroup - false - 4/27/1999
+Steelcase - true - 1/1/1996
+Boston Retirement - true - 7/17/1992
+Reform Pension - true - 1/19/2001
+Walmart - true - 4/19/2008
+Harley-Davidson - false - 5/27/1985
+Lincoln National - false - 7/22/1990
+General Electric - true - 7/16/2020
+Intuit - true - 10/6/1992
+Operating Eng. Local 324 - false - 4/18/1987
+Meijer - true - 9/20/1999
+Beaumont Hospitals - false - 7/25/2011
+Los Angeles Fire & Police - false - 9/15/1989
+W.W. Grainger - true - 2/20/1984
+UFCW, Atlanta - false - 2/2/1990
+Stanislaus County - false - 5/7/1980
+Aerospace - false - 1/2/2015
+Prudential Financial - false - 6/19/2010
+Michigan Catholic Conf. - true - 4/6/1991
+Army & Air Force Exchange - false - 5/10/2009
+Arizona State Retirement - false - 4/19/1994
+Sherwin-Williams - true - 10/12/2019
+YMCA - false - 6/2/2000
+Old Dominion Freight Line - true - 1/10/1996
+Oregon Public Employees - true - 1/14/2003
+JetBlue Airways - false - 7/7/2019
+Alaska Retirement - false - 11/12/1987
+San Francisco City & County - true - 9/21/2020
+Beaumont Hospitals - false - 8/14/1987
+Iron Workers 40, 361, 417 - true - 8/10/2002
+Swagelok - true - 10/26/2015
+Pentegra - false - 2/10/1982
+McKesson - false - 10/5/1981
+Kohler - false - 1/12/1993
+Harvard University - false - 10/11/1983
+Carpenters, North Atlantic - true - 11/22/2000
+Blue Cross/Shield of Mass. - false - 9/18/1982
+RBC Wealth Mgmt. - true - 2/3/2011
+Delaware Public Employees - true - 10/27/1981
+Apple - true - 7/18/1984
+PacifiCorp - false - 9/19/2017
+Hanford Site - false - 8/2/1984
+Eli Lilly - true - 5/22/1984
+Schlumberger - true - 10/18/2000
+D.C. Retirement Board - false - 1/1/2003
+Washington State Board - false - 3/14/2015
+NiSource - false - 5/2/1983
+Christian Church (Disciples) - false - 10/1/2020
+Wespath (UMC) - true - 1/12/1982
+Alaska Retirement - true - 4/10/2019
+Georgetown University - false - 6/2/1997
+Becton, Dickinson - true - 8/17/2005
+Parsons - true - 9/15/2006
+SKF USA - false - 11/5/2007
+Cognizant - true - 11/27/1982
+Mississippi Employees - false - 11/13/2006
+Staples - true - 6/9/1984
+California Public Employees - true - 4/25/2019
+Peabody - true - 4/15/1981
+J.C. Penney - false - 2/1/1990
+Oklahoma Police - false - 3/5/1989
+Gannett - true - 9/4/1987
+Denver Employees - false - 11/22/2007
+Tyco Electronics - false - 5/21/1981
+El Paso Fire & Police - false - 11/21/1989
+Los Angeles County MTA - false - 11/10/2002
+Hewlett Packard Enterprise - false - 1/7/1991
+Pactiv Evergreen - true - 7/17/2015
+D.C. Retirement Board - true - 9/16/1986
+Evangelical Lutheran Church - true - 9/17/2010
+Sappi - true - 9/23/1993
+Conagra Brands - false - 4/18/2018

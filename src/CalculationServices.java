@@ -10,16 +10,16 @@ public class CalculationServices {
                 .orElse(null);
     }
 
-    public String mostHigherPension(List<Worker> workers) {
+    public String workerHigherPension(List<Worker> workers) {
         Worker pensioner = workers.stream()
                 .filter(Objects::nonNull)
                 .max(Comparator.comparingDouble(Worker::calculatePension))
                 .orElse(null);
         assert pensioner != null;
-        return pensioner.getName() + " " + pensioner.getSurname();
+        return pensioner.getName() + " " + pensioner.getSurname() + " - " + Math.floor(pensioner.calculatePension()) + "$";
     }
 
-    public double mostHigherPension(List<Worker> pensioners, int age) {
+    public double mostHigherPensionAmong(List<Worker> pensioners, int age) {
         Worker pensioner = pensioners.stream()
                 .filter(Objects::nonNull)
                 .filter(worker -> worker.getAge() < age)
@@ -61,6 +61,6 @@ public class CalculationServices {
                 .min(Comparator.comparingInt(Worker::getAge))
                 .orElse(null);
         assert depositors != null;
-        return depositors.getName() + " " + depositors.getSurname();
+        return depositors.getName() + " " + depositors.getSurname() + " " + depositors.getAge();
     }
 }

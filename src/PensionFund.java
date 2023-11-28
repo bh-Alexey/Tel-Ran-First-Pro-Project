@@ -5,7 +5,7 @@ import java.util.*;
 
 
 public class PensionFund {
-    private final static int MAX_OF_MEMBERS = 100;
+
     private String name;
 
     private boolean isState;
@@ -14,7 +14,7 @@ public class PensionFund {
 
     private List<Worker> depositors;
 
-    private static Map<DayOfWeek, Boolean> workDays = fillWorkDays();
+    private static Map<DayOfWeek, Boolean> workDays = FundInit.fillWorkDays();
 
     public PensionFund(String name, boolean isState, String dateOfCreation, List<Worker> depositors) {
         this.name = name;
@@ -23,12 +23,16 @@ public class PensionFund {
         this.depositors = depositors;
         workDays = new HashMap<>();
     }
-    public PensionFund(String string) throws FileNotFoundException {
+    public PensionFund(String string) {
         String[] array = string.split(" - ");
         this.name = array[0];
         this.isState = Boolean.parseBoolean(array[1]);
         this.dateOfCreation = array[2];
-        this.depositors = addMembers(getDepositors());
+        try {
+            this.depositors = FundInit.addMembers(isState);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public Map<DayOfWeek, Boolean> getWorkDays() {
@@ -82,33 +86,15 @@ public class PensionFund {
 
     @Override
     public String toString() {
-        return "PensionFund{" +
-                "name='" + name + '\'' +
-                ", isState=" + isState +
-                ", dateOfCreation='" + dateOfCreation + '\'' +
-                ", members=" + depositors +
-                '}';
+        return "Pension Fund - " +
+                "Name: " + name +
+                ", isState - " + isState +
+                ", Since Date: " + dateOfCreation  +
+                ", Number of members: " + depositors.size() + "\n" +
+                " Members: " + depositors +
+                ']';
     }
 
-    public List<Worker> addMembers(List<Worker> depositors) throws FileNotFoundException {
-        Random random = new Random();
-        List<Worker> members = new ArrayList<>();
-        for (int i = 0; i < random.nextInt(MAX_OF_MEMBERS); i++) {
-            members.add(depositors.get(random.nextInt(depositors.size())));
-        }
-        return members;
-    }
-
-    public static HashMap<DayOfWeek, Boolean> fillWorkDays() {
-        HashMap<DayOfWeek, Boolean> workingDays = new HashMap<>();
-        Random random = new Random();
-
-        DayOfWeek[] days = DayOfWeek.values();
-        for (DayOfWeek day: days) {
-            workingDays.put(day, random.nextInt() > 0.1);
-        }
-        return workingDays;
-    }
 
     public void info() {
         System.out.println("Fund's name " + name);
